@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Prefab/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Asset/Square.jpg" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10.3595, 63.2583 )
+
+[node name="world" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 496.857, 252.397 )
+
+[node name="Boundary" type="Node2D" parent="."]
+
+[node name="Walls" type="StaticBody2D" parent="Boundary"]
+position = Vector2( 305.168, 264.966 )
+
+[node name="Sprite" type="Sprite" parent="Boundary/Walls"]
+position = Vector2( 1.62978, 50.1447 )
+scale = Vector2( 0.08, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary/Walls"]
+position = Vector2( 1.59258, 50.5101 )
+scale = Vector2( 1, 2.027 )
+shape = SubResource( 1 )
+
+[node name="Walls2" type="StaticBody2D" parent="Boundary"]
+position = Vector2( 736.976, 265.94 )
+
+[node name="Sprite" type="Sprite" parent="Boundary/Walls2"]
+position = Vector2( 1.62978, 50.1447 )
+scale = Vector2( 0.08, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary/Walls2"]
+position = Vector2( 1.59258, 50.5101 )
+scale = Vector2( 1, 2.027 )
+shape = SubResource( 1 )
+
+[node name="Walls3" type="StaticBody2D" parent="Boundary"]
+position = Vector2( 611.247, 432.115 )
+rotation = 1.5708
+scale = Vector2( 1, 1.767 )
+
+[node name="Sprite" type="Sprite" parent="Boundary/Walls3"]
+position = Vector2( 1.62978, 50.1447 )
+scale = Vector2( 0.08, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary/Walls3"]
+position = Vector2( 1.59258, 50.5101 )
+scale = Vector2( 1, 2.027 )
+shape = SubResource( 1 )
+
+[node name="Walls4" type="StaticBody2D" parent="Boundary"]
+position = Vector2( 611.232, 195.591 )
+rotation = 1.5708
+scale = Vector2( 1, 1.767 )
+
+[node name="Sprite" type="Sprite" parent="Boundary/Walls4"]
+position = Vector2( 1.62978, 50.1447 )
+scale = Vector2( 0.08, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary/Walls4"]
+position = Vector2( 1.59258, 50.5101 )
+scale = Vector2( 1, 2.027 )
+shape = SubResource( 1 )
